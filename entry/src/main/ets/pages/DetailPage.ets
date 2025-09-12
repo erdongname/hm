@@ -1,24 +1,17 @@
 import { AlertDialog, router } from "@kit.ArkUI";
-import { SyPage } from "./SyPage";
-interface book {
-  img: string
-  title: string,
-  price: number,
-  isbn: string,
-  like: boolean,
-  description: string,
-  author: string,
-  publisher: string
-}
+import { BookData1,CBooksData } from "./BookData";
+
+
 @Entry
 @Component
 struct DetailPage {
-  @State Books:book=router.getParams() as book
+@Prop Books:BookData1=router.getParams() as BookData1
   dialog:CustomDialogController = new CustomDialogController({
     builder:AlertDialog({
       content: this.Books.like?'收藏成功':'取消收藏'
     })
   })
+
   build() {
     Column() {
       Row() {
@@ -32,7 +25,7 @@ struct DetailPage {
       .height("5%")
       Scroll() {
         Column() {
-          Image(this.Books.img)
+          Image(this.Books.imgSrc)
             .height(400)
             .margin({ top: 30, bottom: 30 })
 
