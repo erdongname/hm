@@ -1,0 +1,14 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/LoginPage",
+    "pages/ZcPage",
+    "pages/HomePage",
+    "pages/PassPage",
+    "pages/SyPage",
+    "pages/FlPage",
+    "pages/GwPage",
+    "pages/WoPage",
+    "pages/DetailPage"
+  ]
+}
