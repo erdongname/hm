@@ -4,13 +4,13 @@ import { SyPage } from "./SyPage";
 import { WoPage } from "./WoPage";
 import preferences from '@ohos.data.preferences';
 import { router } from "@kit.ArkUI";
-
-
+import { BookData1,CBooksData } from "./BookData";
 @Entry
 @Component
 struct HomePage {
   @State message: string = 'Hello 666';
   @State cuindex: number = 0
+
   // 父组件定义切换方法
   public tabsController: TabsController = new TabsController();
 
@@ -33,7 +33,7 @@ struct HomePage {
     Column() {
       Tabs({ index: this.cuindex, barPosition: BarPosition.End, controller: this.tabsController}) {
         TabContent() {
-          SyPage({ onChangeTab: this.handleTabChange.bind(this) })
+          SyPage({ onChangeTab: this.handleTabChange.bind(this)})
         }.tabBar(this.TabBuilder(0,"首页",$r("app.media.home1"),$r("app.media.home2")))
         TabContent() {
           FlPage()

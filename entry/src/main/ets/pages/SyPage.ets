@@ -1,5 +1,5 @@
 import { router } from "@kit.ArkUI"
-import { BookDataManager, BookItem } from "./BookData"
+import { BookData1,CBooksData } from "./BookData";
 class SwiperDataSource implements IDataSource {
   private data: SwiperData[] = []
 
@@ -37,8 +37,8 @@ export struct SyPage {
   ])
 
   public onChangeTab?: (index: number) => void;
-
-  @State books: BookItem[] = BookDataManager.BookList
+  @State books:BookData1[]=CBooksData()
+  // @State books: BookItem[] = BookDataManager.BookList
 
   build() {
     Scroll() {
@@ -110,7 +110,7 @@ export struct SyPage {
           .justifyContent(FlexAlign.SpaceBetween)
 
           Grid() {
-            ForEach(this.books,(book: BookItem)=>{
+            ForEach(this.books,(book: BookData1)=>{
               GridItem() {
                 Column() {
                   Image(book.imgSrc)
@@ -185,7 +185,7 @@ export struct SyPage {
           .justifyContent(FlexAlign.SpaceBetween)
 
           Grid() {
-            ForEach(this.books,(book: BookItem)=>{
+            ForEach(this.books,(book: BookData1)=>{
               GridItem() {
                 Badge({
                   value: "推荐",
