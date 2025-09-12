@@ -9,6 +9,7 @@
     "pages/FlPage",
     "pages/GwPage",
     "pages/WoPage",
-    "pages/DetailPage"
+    "pages/DetailPage",
+    "pages/DdPage"
   ]
 }

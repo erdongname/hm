@@ -2,21 +2,22 @@ import { FlPage } from "./FlPage";
 import { GwPage } from "./GwPage";
 import { SyPage } from "./SyPage";
 import { WoPage } from "./WoPage";
+import preferences from '@ohos.data.preferences';
+import { router } from "@kit.ArkUI";
+
 
 @Entry
 @Component
- struct HomePage {
+struct HomePage {
   @State message: string = 'Hello 666';
   @State cuindex: number = 0
   // 父组件定义切换方法
-  private tabsController: TabsController = new TabsController();
+  public tabsController: TabsController = new TabsController();
 
-  private handleTabChange(index: number) {
+  public handleTabChange(index: number) {
     this.tabsController.changeIndex(index);
     this.cuindex = index;
   }
-
-
   @Builder
   TabBuilder( index:number, text: string, img: Resource, sleimg: Resource ) {
     Column() {

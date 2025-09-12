@@ -1,7 +1,5 @@
 import { router } from "@kit.ArkUI"
 import { BookDataManager, BookItem } from "./BookData"
-
-
 class SwiperDataSource implements IDataSource {
   private data: SwiperData[] = []
 
@@ -26,9 +24,6 @@ interface SwiperData{
   id:number,
   imgSrc: Resource
 }
-
-
-
 @Entry
 @Component
 export struct SyPage {
@@ -40,7 +35,8 @@ export struct SyPage {
     { id: 3, imgSrc: $r('app.media.03')},
     { id: 4, imgSrc: $r('app.media.04')}
   ])
-  private onChangeTab?: (index: number) => void;
+
+  public onChangeTab?: (index: number) => void;
 
   @State books: BookItem[] = BookDataManager.BookList
 
@@ -107,7 +103,7 @@ export struct SyPage {
               .fontSize(14)
               .fontColor("#737373")
               .onClick(() => {
-                this.onChangeTab?.(1); // 通过父组件方法切换
+                this.onChangeTab?.(1) // 通过父组件方法切换
               })
           }
           .width("100%")
@@ -145,7 +141,9 @@ export struct SyPage {
                       price: book.price,
                       isbn: book.isbn,
                       like: book.like,
-                      description: book.description
+                      description: book.description,
+                      author: book.author,
+                      publisher: book.publisher
                     }
                   })
 
