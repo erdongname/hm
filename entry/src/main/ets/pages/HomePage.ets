@@ -8,7 +8,6 @@ import { WoPage } from "./WoPage";
  struct HomePage {
   @State message: string = 'Hello 666';
   @State cuindex: number = 0
-  a:string=''
   // 父组件定义切换方法
   private tabsController: TabsController = new TabsController();
 
