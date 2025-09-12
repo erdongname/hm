@@ -9,8 +9,6 @@ import { WoPage } from "./WoPage";
   @State message: string = 'Hello 666';
   @State cuindex: number = 0
   // 父组件定义切换方法
-  a:string=''
-  b:string=''
   private tabsController: TabsController = new TabsController();
 
   private handleTabChange(index: number) {
