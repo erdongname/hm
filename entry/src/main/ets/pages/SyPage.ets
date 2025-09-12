@@ -138,7 +138,15 @@ export struct SyPage {
                 .onClick(() => {
                   router.pushUrl({
                     url: "pages/DetailPage",
-                    params: { id: book.id, img: book.imgSrc}
+                    params: {
+                      id: book.id,
+                      img: book.imgSrc,
+                      title: book.title,
+                      price: book.price,
+                      isbn: book.isbn,
+                      like: book.like,
+                      description: book.description
+                    }
                   })
 
                 })

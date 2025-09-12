@@ -2,25 +2,17 @@ import { router } from "@kit.ArkUI";
 
 interface book {
   img: string
+  title: string,
+  price: number,
+  isbn: string,
+  like: boolean,
+  description: string
 }
 
 @Entry
 @Component
 struct DetailPage {
-  @State message: string = 'Hello DetailPage';
-  @State img1: string = ''
-
-  aboutToAppear(): void {
-    this.initData();
-
-  }
-
-  initData() {
-    const bookData = router.getParams() as book
-    this.img1 = bookData.img
-
-  }
-
+  @State Books:book=router.getParams() as book
   build() {
     Column() {
       Row() {
@@ -31,7 +23,7 @@ struct DetailPage {
           })
       }
       .width('100%')
-      Image(this.img1)
+      Image(this.Books.img)
         .width(140)
         .height(200)
     }
