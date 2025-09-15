@@ -46,7 +46,6 @@ struct DetailPage {
               Text(this.Books.author)
                 .fontSize(18)
             }
-
             Row() {
               Text("出版社: ")
                 .fontSize(18)
@@ -54,7 +53,6 @@ struct DetailPage {
               Text(this.Books.publisher)
                 .fontSize(18)
             }
-
             Row() {
               Text("ISBN: ")
                 .fontSize(18)
@@ -62,18 +60,13 @@ struct DetailPage {
               Text(this.Books.isbn)
                 .fontSize(18)
             }
-
             Text()
               .height(30)
-
             Text("详细描述： ")
               .fontSize(18)
               .fontColor(Color.Grey)
-
             Text(this.Books.description)
               .width("100%")
-
-
           }
           .padding(20)
           .width('100%')
@@ -101,15 +94,31 @@ struct DetailPage {
         .height("100%")
         .border({ width: { left:1 }, color: Color.Grey})
         Row() {
-          Image($r("app.media.cart3"))
-            .width(30)
-            .margin({ left:20 })
+          Badge({
+            count: 1,
+            position:{ x: 42, y:-8 },
+            style:{fontSize:14,}
+          }){
+            Image($r("app.media.cart3"))
+              .width(30)
+              .margin({ left:20 })
+          }
+          .width(22)
+          .borderRadius(11)
+
         }
         .width("20%")
         .height("100%")
         .border({ width: { left:1 }, color: Color.Grey})
         .onClick(() => {
-          router.back()
+          router.clear()
+          router.replaceUrl({
+            url:'pages/HomePage',
+            params: {
+              index:2
+            }
+
+          })
         })
         Row() {
           Text("立即购买")
@@ -139,6 +148,7 @@ struct DetailPage {
         .backgroundColor(Color.Red)
         .border({ width: { left:1 }, color: Color.Grey})
         .onClick(() => {
+
 
         })
       }

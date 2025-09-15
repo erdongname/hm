@@ -38,7 +38,7 @@
             Text("查看全部订单>")
               .fontColor(Color.Grey)
               .fontSize(15)
-              .padding({left: 20, right: 20, bottom: 10})
+              .padding({left: 20, right: 20, bottom: 20})
           }
           .width("100%")
           .justifyContent(FlexAlign.SpaceBetween)

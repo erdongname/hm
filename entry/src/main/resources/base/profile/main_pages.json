@@ -10,6 +10,8 @@
     "pages/GwPage",
     "pages/WoPage",
     "pages/DetailPage",
-    "pages/DdPage"
+    "pages/DdPage",
+    "pages/textPage",
+    "pages/PddPage"
   ]
 }

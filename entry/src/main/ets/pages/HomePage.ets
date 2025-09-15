@@ -5,11 +5,20 @@ import { WoPage } from "./WoPage";
 import preferences from '@ohos.data.preferences';
 import { router } from "@kit.ArkUI";
 import { BookData1,CBooksData } from "./BookData";
+
+
+interface dh{
+  index:number
+}
 @Entry
 @Component
 struct HomePage {
-  @State message: string = 'Hello 666';
   @State cuindex: number = 0
+
+  aboutToAppear(): void {
+    let a=router.getParams() as dh
+    this.handleTabChange(a.index)
+  }
 
   // 父组件定义切换方法
   public tabsController: TabsController = new TabsController();

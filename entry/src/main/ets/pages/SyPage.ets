@@ -93,7 +93,6 @@ export struct SyPage {
           offsetY: 2
         })
 
-
         Column() {
           Row() {
             Text("最新上架")
@@ -136,7 +135,7 @@ export struct SyPage {
                     url: "pages/DetailPage",
                     params: {
                       id: book.id,
-                      img: book.imgSrc,
+                      imgSrc: book.imgSrc,
                       title: book.title,
                       price: book.price,
                       isbn: book.isbn,
