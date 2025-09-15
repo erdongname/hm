@@ -35,11 +35,10 @@
           Row() {
             Text("我的订单")
               .fontSize(20)
-
             Text("查看全部订单>")
               .fontColor(Color.Grey)
               .fontSize(15)
-              .padding(20)
+              .padding({left: 20, right: 20, bottom: 10})
           }
           .width("100%")
           .justifyContent(FlexAlign.SpaceBetween)
@@ -78,21 +77,58 @@
           .justifyContent(FlexAlign.SpaceBetween)
         }
         .backgroundColor(Color.White)
-        .margin(10)
-        .padding({left:10, right:10, top:30, bottom:30})
+        .margin({left: 10, right: 10})
+        .padding({left:10, right:10, top:20, bottom:20 })
         .borderRadius(20)
 
         Column() {
          Row() {
            Text("收货地址")
+             .fontSize(15)
+             .margin({ left:20 })
            Text(">")
+             .fontSize(20)
+             .margin({ right: 20})
          }
          .width("100%")
+         .height(55)
          .justifyContent(FlexAlign.SpaceBetween)
+          Row() {
+            Text("我的收藏")
+              .fontSize(15)
+              .margin({ left:20 })
+            Text(">")
+              .fontSize(20)
+              .margin({ right: 20})
+          }
+          .width("100%")
+          .height(55)
+          .justifyContent(FlexAlign.SpaceBetween)
+          Row() {
+            Text("联系我们")
+              .fontSize(15)
+              .margin({ left:20 })
+            Text(">")
+              .fontSize(20)
+              .margin({ right: 20})
+          }
+          .width("100%")
+          .height(55)
+          .justifyContent(FlexAlign.SpaceBetween)
+          Row() {
+            Text("退出登录")
+              .fontSize(15)
+              .margin({ left:20 })
+            Text(">")
+              .fontSize(20)
+              .margin({ right: 20})
+          }
+          .width("100%")
+          .height(55)
+          .justifyContent(FlexAlign.SpaceBetween)
         }
         .backgroundColor(Color.White)
-        .margin(10)
-        .padding({left:10, right:10, top:30, bottom:30})
+        .margin({left:10, right:10, top:380, bottom:30})
         .borderRadius(20)
       }
 
