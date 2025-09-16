@@ -37,7 +37,7 @@ export struct SyPage {
   ])
 
   public onChangeTab?: (index: number) => void;
-  @State books:BookData1[]=CBooksData()
+  books:BookData1[]=CBooksData()
   // @State books: BookItem[] = BookDataManager.BookList
 
   build() {

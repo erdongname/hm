@@ -5,12 +5,12 @@ import { router } from "@kit.ArkUI";
 @Component
 struct LoginPage {
   @State message: string = 'Hello World';
-  @State zhanghao: string = '';
-  @State password: string = '';
+  @State zhanghao: string = '6';
+  @State password: string = '6';
   @State yzm :string = '';
   @State text: string = "点击获取验证码"
   @State ss:boolean = true
-  @State yzmm: string = ''
+  @State yzmm: string = '6'
   randomNumber(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min)
   }

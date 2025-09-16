@@ -16,8 +16,11 @@ struct HomePage {
   @State cuindex: number = 0
 
   aboutToAppear(): void {
-    let a=router.getParams() as dh
-    this.handleTabChange(a.index)
+    if(router.getParams() as dh){
+      let a=router.getParams() as dh
+      this.handleTabChange(a.index)
+    }
+
   }
 
   // 父组件定义切换方法
@@ -42,7 +45,7 @@ struct HomePage {
     Column() {
       Tabs({ index: this.cuindex, barPosition: BarPosition.End, controller: this.tabsController}) {
         TabContent() {
-          SyPage({ onChangeTab: this.handleTabChange.bind(this)})
+          SyPage({ onChangeTab: (index: number): void => this.handleTabChange(index) })
         }.tabBar(this.TabBuilder(0,"首页",$r("app.media.home1"),$r("app.media.home2")))
         TabContent() {
           FlPage()

@@ -8,9 +8,9 @@ export struct FlPage {
 
   @State books:BookData1[] = CBooksData()
   @State fllist:string[]=["数学","心理", "科学","天文","历史", "道德与法治5"]
-  @State flm:string="数学"
   @State cuIndex: number = 0
   @State conent: number = 0
+  @State flm:string=this.fllist[this.cuIndex]
 
   build() {
     Row() {

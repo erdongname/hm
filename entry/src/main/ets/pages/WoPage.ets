@@ -1,3 +1,5 @@
+import { router } from "@kit.ArkUI";
+
 @Entry
 @Component
  export struct WoPage {
@@ -38,9 +40,15 @@
             Text("查看全部订单>")
               .fontColor(Color.Grey)
               .fontSize(15)
-              .padding({left: 20, right: 20, bottom: 20})
+              .onClick(() => {
+                router.pushUrl({
+                  url:"pages/PddPage"
+                })
+              })
+
           }
           .width("100%")
+          .padding({left: 20, right: 20, bottom: 20})
           .justifyContent(FlexAlign.SpaceBetween)
 
           Row(){

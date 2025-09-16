@@ -5,7 +5,8 @@ import { BookData1,CBooksData } from "./BookData";
 @Entry
 @Component
 struct DetailPage {
-@Prop Books:BookData1=router.getParams() as BookData1
+
+  Books:BookData1=router.getParams() as BookData1
   dialog:CustomDialogController = new CustomDialogController({
     builder:AlertDialog({
       content: this.Books.like?'收藏成功':'取消收藏'
